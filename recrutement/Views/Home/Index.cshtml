@@ -1,0 +1,25 @@
+﻿@model IEnumerable<recrutement.Models.CategoryModels>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="panel panel-default" style="padding:15px;">
+        <h1 class="panel-heading">@Html.DisplayFor(modelItem => item.CategoryName)</h1>
+
+            <h5>@Html.DisplayFor(modelItem => item.CategoryDescription)</h5>
+        <div class="row">
+            @foreach (var subItem in item.jobs)
+            {
+                <div class="col-md-3 thumbnail" style="margin-left:20px; margin-bottom:30px; height:380px;">
+                    <img src="~/Uploads/@subItem.JobImage" />
+                    <h3>@Html.DisplayFor(modelItem => subItem.JobTitle)</h3>
+                    <h5>@Html.DisplayFor(modelItem => subItem.JobContent)</h5>
+                    <button class="btn btn-default">Détails</button>
+                     </div>
+            }
+        </div>
+    </div>
+}
