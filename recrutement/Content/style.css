@@ -1,62 +1,9 @@
 ﻿
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
 body {
     padding-top: 100px;
-    font-family: myFont2;
+    font-family: 'Montserrat', sans-serif;
 }
-
-.myfooter{
-    background-color:cornflowerblue;
-    padding-top:10px;
-    font-family:myFont;
-    text-align:justify;
-}
-.subfooter{
-    background-color:#0c5c82;
-    color:white;
-    padding:10px;
-    text-align:center;
-}
-
-.myfooter a{
-    color:azure;
-}
-
-.myfooter p{
-    color:azure;
-}
-.myfooter h3,ul,p{
-    margin-bottom:20px;
-    font-family:myFont2;
-    list-style-type:none;
-}
-
-.logo-size
-{
-    width:120px;
-    height:62px;
-    margin-top:-7px;
-}
-
-#searchName {
-    width: 130px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    background-image: url('../images/searchicon.png');
-    background-repeat:no-repeat;
-    background-position:10px 10px;
-    padding:12px 20px 12px 12px;
-    transition:width 0.4s ease-in-out;
-}
-
-#searchName:focus{
-    width:100%;
-}
-
-.img-size{
-    font-size:90px;
-}
-
 .navbar-user{
     padding:10px;
     padding-bottom:0px;
@@ -68,4 +15,5 @@ body {
     width: 23%;
 }
 }
+
 

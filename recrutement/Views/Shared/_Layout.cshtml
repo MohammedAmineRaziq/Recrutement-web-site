@@ -8,11 +8,13 @@
     <link href="~/Content/style.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
 </head>
 <body>
     <div>
         <!--Navbar-->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" >
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -48,6 +50,13 @@
                                 Contact us
                             </a>
                         </li>
+                        <li>
+                            @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                            {
+                            <input type="text" class="form-control" placeholder="Search ..."
+                                   name="searchName" style="margin-top:9px ; margin-left:90px" />
+                            }
+                        </li>
                     </ul>
                     <!--partial view for login-->
                     @Html.Partial("_login")
@@ -65,17 +74,7 @@
 
 
         <!--Footer-->
-        <footer class="navbar navbar-fixed-bottom myfooter">
-            <div class="container">
-                <div class="row">
-                    
-                </div>
-            </div>
-            <div class="subfooter">
-                <span> </span>
-            </div>
-
-        </footer>
+       
     </div>
 
         @Scripts.Render("~/bundles/jquery")

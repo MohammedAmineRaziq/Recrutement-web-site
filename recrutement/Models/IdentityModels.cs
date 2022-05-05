@@ -1,8 +1,10 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using recrutement.Models;
 
 namespace WebApplication1.Models
 {
@@ -10,6 +12,8 @@ namespace WebApplication1.Models
     public class ApplicationUser : IdentityUser
     {
         public string UserType { get; set; }
+        public virtual ICollection<JobModel> Jobs { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Notez qu'authenticationType doit correspondre à l'élément défini dans CookieAuthenticationOptions.AuthenticationType
@@ -34,5 +38,8 @@ namespace WebApplication1.Models
         public System.Data.Entity.DbSet<recrutement.Models.CategoryModels> CategoryModels { get; set; }
 
         public System.Data.Entity.DbSet<recrutement.Models.JobModel> JobModels { get; set; }
+
+        public System.Data.Entity.DbSet<recrutement.Models.JobApplicationModels> JobApplicationModels { get; set; }
     }
+    
 }

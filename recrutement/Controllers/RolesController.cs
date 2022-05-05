@@ -9,6 +9,8 @@ using WebApplication1.Models;
 
 namespace recrutement.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class RolesController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();

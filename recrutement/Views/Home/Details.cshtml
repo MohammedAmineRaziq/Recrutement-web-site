@@ -1,0 +1,41 @@
+﻿@model recrutement.Models.JobModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details de post .</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(model=>model.JobImage)" class="thumbnail" style="width:auto; height:180px;" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobContent) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobContent)
+        </dd>
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Postuler", "Apply", new { id = Model.Id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("retourner", "Index", new { @class = "btn btn-primary" })
+</p>

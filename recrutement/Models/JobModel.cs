@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace recrutement.Models
 {
@@ -21,7 +22,11 @@ namespace recrutement.Models
         [DisplayName("Domaine")]
         public int CategoryId { get; set; }
 
-        public CategoryModels Category { get; set; }
+        public String UserId { get; set; }
+
+
+        public virtual CategoryModels Category { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
     }
 }

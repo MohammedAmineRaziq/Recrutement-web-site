@@ -1,0 +1,44 @@
+﻿@model IEnumerable<recrutement.Models.JobsAppViewModels>
+@{
+    ViewBag.Title = "GetJobsByPublisher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var gr in Model)
+{
+    <h3>@gr.JobTitle</h3>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                Nom de Candidat
+            </th>
+            <th>
+                Message
+            </th>
+            <th>
+                Date de Candidature
+            </th>
+            <th>
+                CV
+            </th>
+        </tr>
+        @foreach (var item in gr.Items)
+        {
+    <tr>
+        <td>
+            @item.User.UserName
+        </td>
+        <td>
+            @item.Message
+        </td>
+        <td>
+            @item.ApplyDate
+        </td>
+        <td>
+            <img src="~/Uploads/@Html.DisplayFor(model=>item.CV)" class="thumbnail" style="width:48px; height:48px;" />
+        </td>
+    </tr>
+        }
+    </table>
+}

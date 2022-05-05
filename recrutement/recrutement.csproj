@@ -185,6 +185,14 @@
     <Compile Include="Migrations\202204090943539_addjobs.Designer.cs">
       <DependentUpon>202204090943539_addjobs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205041624342_JobApplicationModels.cs" />
+    <Compile Include="Migrations\202205041624342_JobApplicationModels.Designer.cs">
+      <DependentUpon>202205041624342_JobApplicationModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205051107511_jobModelUpdate.cs" />
+    <Compile Include="Migrations\202205051107511_jobModelUpdate.Designer.cs">
+      <DependentUpon>202205051107511_jobModelUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CategoryModels.cs" />
@@ -192,6 +200,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\JobApplicationModels.cs" />
     <Compile Include="Models\JobModel.cs" />
+    <Compile Include="Models\JobsAppViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +222,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\magnifying-glass-computer-icons-search-icon.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\font\DroidKufi-Regular.ttf" />
@@ -305,6 +315,13 @@
     <Content Include="Views\Roles\Details.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Apply.cshtml" />
+    <Content Include="Views\Home\GetJobsByUser.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\GetJobsByPublisher.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -335,6 +352,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204090943539_addjobs.resx">
       <DependentUpon>202204090943539_addjobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205041624342_JobApplicationModels.resx">
+      <DependentUpon>202205041624342_JobApplicationModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205051107511_jobModelUpdate.resx">
+      <DependentUpon>202205051107511_jobModelUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

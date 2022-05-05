@@ -3,7 +3,11 @@
     ViewBag.Title = "Home Page";
 }
 
-
+<div class="jumbotron alert alert-info">
+    <h3>welcome to our site</h3>
+    <p>Bienvenue dans l'espace de recherche d'emploi en tous genres. Vous pouvez publier une offre d'emploi si vous êtes éditeur, et vous pouvez postuler à une offre d'emploi si vous êtes à la recherche d'un emploi.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">for more information &raquo;</a></p>
+</div>
 @foreach (var item in Model)
 {
     <div class="panel panel-default" style="padding:15px;">
@@ -17,7 +21,7 @@
                     <img src="~/Uploads/@subItem.JobImage" />
                     <h3>@Html.DisplayFor(modelItem => subItem.JobTitle)</h3>
                     <h5>@Html.DisplayFor(modelItem => subItem.JobContent)</h5>
-                    <button class="btn btn-default">Détails</button>
+                    @Html.ActionLink("Details", "Details", new { JobId = subItem.Id }, new { @class="btn btn-primary" })
                      </div>
             }
         </div>

@@ -11,10 +11,12 @@ using recrutement.Models;
 
 namespace recrutement.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [AllowAnonymous]
         // GET: Category
         public ActionResult Index()
         {
